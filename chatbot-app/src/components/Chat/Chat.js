@@ -11,8 +11,9 @@ const Chat = ({initialMessages}) => {
     setMessages([...messages, {sender, text, isLeft }]);
   };
 
-  const onSendMessage = (text, isLeft) => {
-    let sender = isLeft ? "Assistant" : "You";
+  const onSendMessage = (text) => {
+    let sender = "You";
+    let isLeft = false;
     addMessage(sender, text, isLeft);
   }
 

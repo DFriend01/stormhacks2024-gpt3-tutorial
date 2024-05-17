@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 import MessageBox from '../MessageBox/MessageBox';
 import './MessageList.css';
 
-const MessageList = ({initialMessages}) => {
-  const [messages, setMessages] = useState(initialMessages);
-
-  const addMessage = (sender, text, isLeft) => {
-    setMessages([...messages, {sender, text, isLeft }]);
-  };
-
+const MessageList = ({messages}) => {
   return (
     <div className="message-list">
       {messages.map((msg, index) => (
@@ -20,11 +14,11 @@ const MessageList = ({initialMessages}) => {
 };
 
 MessageList.propTypes = {
-  initialMessages: PropTypes.arrayOf(PropTypes.objectOf)
+  messages: PropTypes.arrayOf(PropTypes.objectOf)
 }
 
 MessageList.defaultProps = {
-  initialMessages: []
+  messages: []
 }
 
 export default MessageList;

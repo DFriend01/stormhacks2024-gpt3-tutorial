@@ -15,18 +15,16 @@ const MessageList = ({initialMessages}) => {
       {messages.map((msg, index) => (
         <MessageBox key={index} sender={msg.sender} message={msg.text} isLeft={msg.isLeft} />
       ))}
-      <button onClick={() => addMessage('Assistant', 'New message!', true)}>Add Left Message</button>
-      <button onClick={() => addMessage('You', 'New message!', false)}>Add Right Message</button>
     </div>
   );
 };
 
 MessageList.propTypes = {
-    initialMessages: PropTypes.arrayOf(PropTypes.object)
+  initialMessages: PropTypes.arrayOf(PropTypes.objectOf)
 }
 
 MessageList.defaultProps = {
-    initialMessages: []
+  initialMessages: []
 }
 
 export default MessageList;

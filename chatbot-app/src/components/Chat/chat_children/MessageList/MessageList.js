@@ -4,7 +4,7 @@ import MessageBox from '../MessageBox/MessageBox';
 import './MessageList.css';
 
 const MessageList = ({initialMessages}) => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(initialMessages);
 
   const addMessage = (sender, text, isLeft) => {
     setMessages([...messages, {sender, text, isLeft }]);

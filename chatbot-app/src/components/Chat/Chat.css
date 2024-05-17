@@ -1,0 +1,20 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  max-width: 600px; /* Optional: Max width for the chat container */
+  margin: 0 auto; /* Center the chat container horizontally */
+  border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visualization */
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.input-container {
+  padding: 10px;
+  border-top: 1px solid #ccc; /* Optional: Add a border-top for separation */
+}

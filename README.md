@@ -1,1 +1,3 @@
-# stormhacks2024-gpt3-tutorial
+# Stormhacks 2024: Introduction to GPT-3 in Web Applications
+
+

@@ -1,0 +1,17 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px; /* Set a fixed height for demonstration purposes */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+}
+
+.message-list button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -31,7 +31,7 @@ if you are interested in trying the app yourself.
 
 I am a recent graduate from UBC ECE and placed second in Stormhacks 2023! My project last
 year is on [Devpost](https://devpost.com/software/watchdog-exrdgn) if you are interested.
-Using GPT was instrumental to the project.
+Using GPT was instrumental to the success of the project.
 
 ### Experience
 - Research Assistant at UBC for EV adoption and using AI agents in pavement management

@@ -18,6 +18,19 @@ const addConversation = async (title) => {
     });
 };
 
+const updateConversationTitle = async (conversation_id, title) => {
+    const sql = `UPDATE conversations SET title = ? WHERE id = ?`;
+    return new Promise((resolve, reject) => {
+        db.run(sql, [title, conversation_id], (err) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve();
+            }
+        });
+    });
+};
+
 const removeConversation = async (conversation_id) => {
     const sql = `DELETE FROM conversations WHERE id = ?`;
     return new Promise((resolve, reject) => {
@@ -83,6 +96,7 @@ async function getLatestMessageFromConversation(conversation_id) {
 
 module.exports = {
     addConversation,
+    updateConversationTitle,
     removeConversation,
     addMessageToConversation,
     getConversationMessages

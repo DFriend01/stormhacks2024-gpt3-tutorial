@@ -19,10 +19,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
-
 # Distribution directories
 dist/
+
+# Database files
+*.db
+
+# Environment variables
+*.env
 
 # Typescript v1 declaration files
 typings/

@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "initdb": "node src/db/initdb.js"
+    "initdb": "node src/db/initdb.js",
+    "test": "node src/db/initdb.js && mocha test/* --require chai/register-expect.js --exit"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,10 @@
     "express": "^4.21.0",
     "openai": "^4.61.0",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0"
   }
 }

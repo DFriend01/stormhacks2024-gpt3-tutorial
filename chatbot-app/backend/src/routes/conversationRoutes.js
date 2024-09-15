@@ -1,7 +1,7 @@
 const express = require('express');
 const {
     createConversation,
-    getConversation,
+    getConversations,
     deleteConversation,
     addMessageToConversation,
     updateConversationTitle,
@@ -11,7 +11,7 @@ const router = express.Router();
 
 // Define routes
 router.post('/', createConversation);
-router.get('/:id', getConversation);
+router.get('/', getConversations);
 router.delete('/:id', deleteConversation);
 router.post('/:id/messages', addMessageToConversation);
 router.put('/:id', updateConversationTitle);

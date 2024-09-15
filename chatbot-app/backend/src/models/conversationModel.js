@@ -12,7 +12,7 @@ const addConversation = async (title) => {
             if (err) {
                 reject(err);
             } else {
-                resolve(this.lastID);
+                resolve();
             }
         });
     });

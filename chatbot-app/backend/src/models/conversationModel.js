@@ -34,11 +34,11 @@ const getConversations = async () => {
 const updateConversationTitle = async (conversation_id, title) => {
     const sql = `UPDATE conversations SET title = ? WHERE id = ?`;
     return new Promise((resolve, reject) => {
-        db.run(sql, [title, conversation_id], (err) => {
+        db.run(sql, [title, conversation_id], function(err) {
             if (err) {
                 reject(err);
             } else {
-                resolve();
+                resolve(this.changes);
             }
         });
     });

@@ -60,9 +60,10 @@ const updateConversationTitle = async (req, res) => {
     try {
         const { id } = req.params;
         const { title } = req.body;
-        const changes = await conversationModel.updateConversationTitle(id, title);
+        const parsedId = parseInt(id);
+        const changes = await conversationModel.updateConversationTitle(parsedId, title);
         if (changes > 0) {
-            res.status(200).json({ id, title });
+            res.status(200).json({ id: parsedId, title });
         } else {
             res.status(404).json({ error: 'Conversation not found' });
         }

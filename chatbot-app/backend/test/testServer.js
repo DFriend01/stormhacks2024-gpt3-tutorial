@@ -12,6 +12,7 @@ describe('Server Routes', () => {
             .expect(201)
             .end((err, res) => {
                 if (err) return done(err);
+                expect(res.body).to.have.property('id');
                 expect(res.body).to.have.property('title', 'Test Conversation');
                 conversationId = res.body.id;
                 done();

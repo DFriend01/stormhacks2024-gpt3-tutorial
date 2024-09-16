@@ -16,8 +16,8 @@ const createConversation = async (req, res) => {
      */
     try {
         const { title } = req.body;
-        await conversationModel.addConversation(title);
-        res.status(201).json({ title });
+        const id = await conversationModel.addConversation(title);
+        res.status(201).json({ id, title });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

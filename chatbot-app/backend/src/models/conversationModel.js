@@ -8,11 +8,11 @@ const db = new sqlite3.Database(db_path);
 const addConversation = async (title) => {
     const sql = `INSERT INTO conversations (title) VALUES (?)`;
     return new Promise((resolve, reject) => {
-        db.run(sql, [title], (err) => {
+        db.run(sql, [title], function(err) {
             if (err) {
                 reject(err);
             } else {
-                resolve();
+                resolve(this.lastID);
             }
         });
     });

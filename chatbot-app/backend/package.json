@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/db/initdb.js && node src/server.js",
     "initdb": "node src/db/initdb.js",
     "test": "node src/db/initdb.js && mocha test/* --require chai/register-expect.js --exit"
   },

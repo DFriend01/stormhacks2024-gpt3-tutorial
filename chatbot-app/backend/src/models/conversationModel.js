@@ -66,7 +66,7 @@ const addMessageToConversation = async (conversation_id, role, message) => {
             if (err) {
                 reject(err);
             } else {
-                resolve();
+                resolve(message_id);
             }
         });
     });

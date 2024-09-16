@@ -112,10 +112,11 @@ const addMessageToConversation = async (req, res) => {
      * }
      */
     try {
-        const { conversation_id } = req.params;
+        const { id } = req.params;
+        const parsedId = parseInt(id);
         const { role, message } = req.body;
-        const message_id = await conversationModel.addMessageToConversation(conversation_id, role, message);
-        res.status(201).json({ conversation_id, message_id, role, message });
+        const message_id = await conversationModel.addMessageToConversation(parsedId, role, message);
+        res.status(201).json({ conversation_id: parsedId, message_id, role, message });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
